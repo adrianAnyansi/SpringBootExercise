@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.HashMap;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -21,22 +19,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.boot.test.web.client.TestRestTemplate;
 
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
-// @EnableJpaRepositories("org.mda.rists.cghub.ws.repository") 
 // @WebMvcTest
 @WebMvcTest(EmployeeRestController.class)
 // @SpringBootTest
 @AutoConfigureMockMvc
-// @EnableJpaRepositories("com.example.demo")
-// @EntityScan("com.example.demo")
 class DemoApplicationTests {
 
 	@Autowired
